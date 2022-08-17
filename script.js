@@ -58,15 +58,54 @@ window.addEventListener("scroll", function () {
 
 
 var myindex = 0;
-        carousel();
-        function carousel() {
+carousel();
+function carousel() {
 
-        var x = document.getElementsByClassName("mySlides");
-        for(var i = 0; i < x.length; i++){
-            x[i].style.display = "none"
-        }
-        myindex++;
-        if(myindex > x.length) {myindex = 1}
-        x[myindex-1].style.display = "block";
-        setTimeout(carousel,2000);
-        }
+  var x = document.getElementsByClassName("mySlides");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none"
+  }
+  myindex++;
+  if (myindex > x.length) { myindex = 1 }
+  x[myindex - 1].style.display = "block";
+  setTimeout(carousel, 2000);
+}
+
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  jQuery('#example3_2402').sliderPro({
+    //width
+    width: 360,
+
+    //height
+    height: 270,
+
+    //autoplay
+    autoplay: true,
+    autoplayOnHover: 'none',
+    autoplayDelay: 5000,
+
+
+    arrows: true,
+    buttons: true,
+    smallSize: 500,
+    mediumSize: 1000,
+    largeSize: 3000,
+    fade: false,
+
+    //thumbnail
+    thumbnailArrows: true,
+    thumbnailWidth: 120,
+    thumbnailHeight: 120,
+    thumbnailsPosition: 'bottom',
+    centerImage: true,
+    imageScaleMode: 'cover',
+    allowScaleUp: true,
+    startSlide: 0,
+    loop: true,
+    slideDistance: 5,
+    autoplayDirection: 'normal',
+    touchSwipe: true,
+    fullScreen: true,
+  });
+});
